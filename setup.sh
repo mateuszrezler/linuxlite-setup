@@ -20,3 +20,9 @@ ffmpeg -i /dev/video0 -vcodec rawvideo -pix_fmt yuv420p -vsync 2 -threads 0 \\
 -f v4l2 /dev/video1
 " > ~/.skype.sh
 
+# Turn on echo cancellation
+sudo sed -i \
+"/load-module module-filter-apply/a load-module module-echo-cancel" \
+/etc/pulse/default.pa
+pulseaudio -k
+

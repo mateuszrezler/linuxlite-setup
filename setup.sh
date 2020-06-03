@@ -32,3 +32,6 @@ sudo apt -y install git
 git config --global user.name "DUMMY NAME"
 git config --global user.email "DUMMY@EMAIL.COM"
 
+# Install utilities
+sudo apt -y install gedit
+

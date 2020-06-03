@@ -2,7 +2,8 @@
 
 # IMPORTANT! Before running:
 # 1. Install Skype and Webcam Software using Lite Software tool
-# 2. Make your custom modifications
+# 2. Replace DUMMY DATA with your personal data
+# 3. Make your custom modifications
 
 # Tidy up the desktop
 # Leave "recyclebin.desktop" and "userfiles.desktop" files only
@@ -25,4 +26,9 @@ sudo sed -i \
 "/load-module module-filter-apply/a load-module module-echo-cancel" \
 /etc/pulse/default.pa
 pulseaudio -k
+
+# Install and configure Git
+sudo apt -y install git
+git config --global user.name "DUMMY NAME"
+git config --global user.email "DUMMY@EMAIL.COM"
 
